@@ -30,7 +30,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="/blog/:id" element={<BlogreadPage />} />
         <Route path="/join-us" element={<JoinusPage />} />
       </Routes>
-      {/* <Footer/> */}
+      <Footer/>
     </BrowserRouter>
   </StrictMode>
 );
