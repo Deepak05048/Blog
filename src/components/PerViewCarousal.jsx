@@ -6,16 +6,16 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { EffectFade, Navigation, Pagination ,Autoplay} from 'swiper/modules';
-import PerViewCarousal from '../components/PerViewCarousal';
+import { Navigation, Pagination ,Autoplay} from 'swiper/modules';
 
-export default function JoinusPage() {
+export default function PerViewCarousal() {
   return (
-    <div className='space-y-12'>
+    <div>
 
       <Swiper
        loop={true}
-       
+       slidesPerView={3}
+       spaceBetween={40}
 
        autoplay={{
         delay: 2500,
@@ -24,15 +24,14 @@ export default function JoinusPage() {
 
 
 
-        spaceBetween={30}
+      
 
 
-        effect={'fade'}
         navigation={true}
         pagination={{
           clickable: true,
         }}
-        modules={[EffectFade, Navigation, Pagination , Autoplay]}
+        modules={[ Navigation, Pagination , Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide>
@@ -48,7 +47,6 @@ export default function JoinusPage() {
           <img  className='h-[80vh] w-full object-cover' src="https://swiperjs.com/demos/images/nature-4.jpg" />
         </SwiperSlide>
       </Swiper>
-      <PerViewCarousal/>
 
     </div>
   )
